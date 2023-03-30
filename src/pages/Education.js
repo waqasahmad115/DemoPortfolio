@@ -12,46 +12,20 @@ import { Chrono } from 'react-chrono'
 
 function Education() {
   const [skills, setSkills] = useState([])
-  const [workingExperience, setWorkingExperience] = useState([])
+  const [items, setItems] = useState([]);
   const [educationExperience, setEducationExperience] = useState([])
 
   useEffect(() => {
     axios.get('/api/skills').then((response) => {
       setSkills(response.data)
     })
-    axios.get('/api/experience').then((response) => {
-      setWorkingExperience(response.data.workingExperience)
+    axios.get('/api/experience').then((response) => { 
       setEducationExperience(response.data.educationExperience)
     })
   }, [])
-  const items = [
-    {
-      title: '2018 - 2019',
-      cardTitle: 'Master of Science',
-      cardDetailedText: [
-        'Abc University',
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
-      ],
-    },
-    {
-      title: '2016 - 2018',
-      cardTitle: 'Bachelor of Science',
-      cardDetailedText: [
-        'Abc University',
-
-        ,
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
-      ],
-    },
-    {
-      title: '2014 - 1016',
-      cardTitle: 'Higher Schoold Graduation',
-      cardDetailedText: [
-        'Abc College',
-        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
-      ],
-    },
-  ]
+  useEffect(()=>{
+    setItems(educationExperience)
+  },[items])
 
   return (
     <Layout>
@@ -64,7 +38,7 @@ function Education() {
         className="container"
         intial={{ width: 0 }}
         animate={{ width: '100%' }}
-        exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+        exit={{ x: window.innerWidth, transition: { duration: 2 } }}
       >
         <Suspense fallback={<Spinner />}>
           <div className="mi-resume-area mi-section mi-padding-top mi-padding-bottom">
@@ -77,9 +51,7 @@ function Education() {
                   <Chrono
                     items={items}
                     mode="VERTICAL"
-                    slideShow
-                    slideItemDuration={4500}
-                    slideShowType="reveal"
+                    allowDynamicUpdate
                     theme={{
                       primary: '#318ccc',
                       secondary: '#ff0057',

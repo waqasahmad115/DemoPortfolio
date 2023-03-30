@@ -52,6 +52,8 @@ function Portfolio() {
          exit={{x:window.innerWidth, transition:{duration:1}}}>
           <div className="container">
             <Sectiontitle title="Portfolio" />
+            <div  className="mi-resume-wrapper">
+  <div className="mi-padding-top">
             {<PortfolioView portfolio={currentPortfolio} />}
             {!(portfolio.length > portfolioPerPage) ? null : (
               <Pagination
@@ -62,7 +64,7 @@ function Portfolio() {
                 currentPage={currentPage}
               />
             )}
-          </div>
+          </div></div></div>
         </motion.div>
       </Suspense>
     

@@ -1,9 +1,8 @@
 import React from 'react'
 
-function BackgroundLines(props){
+function BackgroundLines(props) {
   return (
     <div className="mi-bglines">
-
     </div>
   )
 }

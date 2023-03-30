@@ -80,23 +80,8 @@ const data = {
   ],
   mySkills: [
     {
-      title: 'React',
-      icon2: 'react',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
-      years: 2,
-      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
-    },
-    {
-      title: 'JavaScript',
-      icon2: 'javascript',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
-      years: 2,
-      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
-    },
-    {
-      title: 'Python',
-      icon2: 'python',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+      title: 'Frontend',
+      icon: '/resume/skillicons/react.png',
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
@@ -115,12 +100,20 @@ const data = {
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
     {
+      title: 'JavaScript',
+      icon2: 'javascript',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
+      years: 2,
+      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
+    },
+    {
       title: 'C#',
       icon2: 'c#',
       icon: '/resume/skillicons/C.png',
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
+
     {
       title: 'Node',
       icon: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg',
@@ -128,26 +121,18 @@ const data = {
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
     {
-      title: 'Jest',
-      icon: 'https://iconape.com/wp-content/files/dx/352988/svg/jest-seeklogo.com.svg',
+      title: 'Python',
+      icon2: 'python',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
+  ],
+  programinSkills: [
     {
-      title: 'Docker',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg',
-      years: 2,
-      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
-    },
-    {
-      title: 'Git',
-      icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg',
-      years: 2,
-      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
-    },
-    {
-      title: 'MongoDB',
-      icon: '/resume/skillicons/mongodb.png',
+      title: 'React',
+      icon2: 'react',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
@@ -157,15 +142,39 @@ const data = {
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
+
     {
-      title: 'Frontend',
-      icon: '/resume/skillicons/react.png',
+      title: 'Jest',
+      icon: 'https://iconape.com/wp-content/files/dx/352988/svg/jest-seeklogo.com.svg',
+      years: 2,
+      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
+    },
+  ],
+  databases: [
+    {
+      title: 'MongoDB',
+      icon: '/resume/skillicons/mongodb.png',
+      years: 2,
+      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
+    },
+  ],
+  other: [
+    {
+      title: 'Git',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg',
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
     {
       title: 'CI/CD',
       icon: '/resume/skillicons/cicg.png',
+      years: 2,
+      placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
+    },
+
+    {
+      title: 'Docker',
+      icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg',
       years: 2,
       placesUsed: ['Amex', 'SAFCO', 'FAU', 'JHU', 'Personal'],
     },
@@ -374,56 +383,60 @@ const data = {
   experience: {
     workingExperience: [
       {
-        id: 1,
-        year: '2018 - Present',
-        position: 'Frontend Web Developer',
-        company: 'Abc Company',
-        details:
+        title: '2018 - Present',
+        cardTitle: 'Frontend Web Developer',
+        cardDetailedText: [
+          'Abc Company',
+  
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        ],
       },
       {
-        id: 2,
-        year: '2016 - 2018',
-        position: 'Frontend Web Developer',
-        company: 'CBA Company',
-        details:
+        title: '2016 - 2018',
+        cardTitle: 'Frontend Web Developer',
+        cardDetailedText: [
+          'CBA Company',
+  
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        ],
       },
       {
-        id: 3,
-        year: '2014 - 1016',
-        position: 'UI/UX Designer',
-        company: 'Example Company',
-        details:
+        title: '2014 - 1016',
+        cardTitle: 'UI/UX Designer',
+        cardDetailedText: [
+          'Example Company',
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        ],
       },
     ],
     educationExperience: [
       {
-        id: 1,
-        year: '2018 - 2019',
-        graduation: 'Master of Science',
-        university: 'Abc University',
-        details:
+        title: '2018 - 2019',
+        cardTitle: 'Master of Science',
+        cardDetailedText: [
+          'Abc University',
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        ],
       },
       {
-        id: 2,
-        year: '2016 - 2018',
-        graduation: 'Bachelor of Science',
-        university: 'Abc University',
-        details:
+        title: '2016 - 2018',
+        cardTitle: 'Bachelor of Science',
+        cardDetailedText: [
+          'Abc University',
+  
+          ,
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        ],
       },
       {
-        id: 3,
-        year: '2015 - 2016',
-        graduation: 'Higher Schoold Graduation',
-        university: 'Abc College',
-        details:
+        title: '2014 - 1016',
+        cardTitle: 'Higher Schoold Graduation',
+        cardDetailedText: [
+          'Abc College',
           'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, magni mollitia, aspernatur consequatur accusamus vero eum facere exercitationem velit suscipit ipsam placeat libero. Deleniti exercitationem nostrum quasi. Molestiae, vel porro.',
+        ],
       },
-    ],
+    ]
   },
   blogs: [
     {
@@ -618,5 +631,21 @@ Mock.onGet('/api/blog').reply((config) => {
 
 Mock.onGet('/api/contactinfo').reply((config) => {
   const response = data.contactInfo
+  return [200, response]
+})
+Mock.onGet('/api/myskills').reply((config) => {
+  const response = data.mySkills
+  return [200, response]
+})
+Mock.onGet('/api/programinSkills').reply((config) => {
+  const response = data.programinSkills
+  return [200, response]
+})
+Mock.onGet('/api/other').reply((config) => {
+  const response = data.other
+  return [200, response]
+})
+Mock.onGet('/api/databases').reply((config) => {
+  const response = data.databases
   return [200, response]
 })

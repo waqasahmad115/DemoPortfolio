@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 export const GlobalStyle = createGlobalStyle`
 
 body::-webkit-scrollbar {
-    width: 1.5rem;
+    width: 1rem;
   }
   body::-webkit-scrollbar-track {
      background-color: rgb(24 24 29);

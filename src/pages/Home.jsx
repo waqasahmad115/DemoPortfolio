@@ -32,11 +32,12 @@ function Home({ lightMode }) {
 
 
       <Suspense fallback={<Spinner />}>
-        <motion.div
-         initial={{ opacity: 0, y: 200 }}
-         animate={{ opacity: 1, y: 0 }}
-         exit={{ opacity: 0, y: -100 }}
-         transition={{ duration: 1 }} >
+      <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: 100 }}
+          transition={{ duration: 2 }}
+        >
         <div className="mi-home-area mi-padding-section" >
           <HomeBackground/>
           <div className="container">

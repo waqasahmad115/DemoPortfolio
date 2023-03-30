@@ -2,6 +2,7 @@
  * About Styles
  */
 
+
 .mi-about {
   &-image {
     position: relative;
@@ -115,6 +116,7 @@
         margin-top: -35px;
       }
     }
+
     &-content {
       margin-top: 30px;
 
@@ -127,4 +129,15 @@
       }
     }
   }
+}
+.content-padding {
+  margin-left: 20px;
+}
+
+.card-text-cente {
+  text-align: center;
+}
+
+.card-fix-height {
+  height: 400px;
 }

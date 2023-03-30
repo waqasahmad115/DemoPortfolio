@@ -8,8 +8,7 @@ import Spinner from "../components/Spinner";
 import { GlobalStyle } from "./globleStyle";
 import { motion } from "framer-motion";
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
-import LocationIcon from '../assets/images/LocationIcon.png'
-
+import LocationIcon from '../assets/images/locationMarker.png'
 
 function Contact(props) {
    const refMap = useRef(null)
@@ -97,127 +96,26 @@ function Contact(props) {
       <Suspense fallback={<Spinner />}>
         <motion.div className="mi-contact-area mi-section mi-padding-top mi-padding-bottom"        intial={{width:0}}
          animate={{width:'100%'}}
-         exit={{x:window.innerWidth, transition:{duration:1}}}>
+         exit={{x:window.innerWidth, transition:{duration:2}}}>
           <div className="container">
             <Sectiontitle title="Contact Me" />
             <div className="row">
+             
+            
               <div className="col-lg-6">
-                <div className="mi-contact-formwrapper">
-                  <h4>Get In Touch</h4>
-                  <form
-                    action="#"
-                    className="mi-form mi-contact-form"
-                    onSubmit={submitHandler}
-                  >
-                    <div className="mi-form-field">
-                      <label htmlFor="contact-form-name">
-                        Enter your name*
-                      </label>
-                      <input
-                        onChange={handleChange}
-                        type="text"
-                        name="name"
-                        id="contact-form-name"
-                        value={formdata.name}
-                      />
-                    </div>
-                    <div className="mi-form-field">
-                      <label htmlFor="contact-form-email">
-                        Enter your email*
-                      </label>
-                      <input
-                        onChange={handleChange}
-                        type="text"
-                        name="email"
-                        id="contact-form-email"
-                        value={formdata.email}
-                      />
-                    </div>
-                    <div className="mi-form-field">
-                      <label htmlFor="contact-form-subject">
-                        Enter your subject*
-                      </label>
-                      <input
-                        onChange={handleChange}
-                        type="text"
-                        name="subject"
-                        id="contact-form-subject"
-                        value={formdata.subject}
-                      />
-                    </div>
-                    <div className="mi-form-field">
-                      <label htmlFor="contact-form-message">
-                        Enter your Message*
-                      </label>
-                      <textarea
-                        onChange={handleChange}
-                        name="message"
-                        id="contact-form-message"
-                        cols="30"
-                        rows="3"
-                        value={formdata.message}
-                      ></textarea>
-                    </div>
-                    <div className="mi-form-field">
-             <div style={{height:'180px' }}>
-             <Map
-                        ref={refMap}
-                        google={props.google}
-                        initialCenter={pin}
-                        style={{ borderRadius: '2%' }}
-                        center={pin}
-                        zoom={16}
-                        mapTypeControl={false}
-                        streetViewControl={false}
-                      >
-  <Marker
-  ref={refMap}
-         onClick={()=>{window.open("https://maps.google.com?q="+pin.lat+","+pin.lng)}}
-        icon={{
-          url: LocationIcon,
-          anchor: new props.google.maps.Point(32,32),
-          scaledSize: new props.google.maps.Size(20,25)
-        }}
-        position={pin}
-      />
-                        
-                        
-                      </Map>
+                <div  className="mi-resume-wrapper" style={{marginBottom:'30px'}}>
+                
+                <div className="mi-contact-info content-padding">
 
-
-                      </div>
-
-
-
-                    </div>
-                    <div className="mi-form-field">
-                      <a className="mi-button"
-                        href={"mailto:" }>
-                        Send Mail
-                      </a>
-                    </div>
-                  </form>
-                  {handleAlerts()}
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="mi-contact-info">
                   {!phoneNumbers ? null : (
-
-
-
-
-
-
-
-
-                    <motion.div className="mi-contact-infoblock"       whileHover={{
+                    <motion.div className="mi-contact-infoblock"  whileHover={{
                       scale: 0.9,
                       transition: { duration: 1 },
-                      backgroundColor: '#ba4c72',
+                      backgroundColor: '#ff0057',
                     }}>
                       <span className="mi-contact-infoblock-icon">
-                        <Icon.Phone />
+                        <Icon.Phone style={{color:"#538069"}}
+                         />
                       </span>
                       <div className="mi-contact-infoblock-content">
                         <h6>Phone</h6>
@@ -238,10 +136,10 @@ function Contact(props) {
                     <motion.div className="mi-contact-infoblock"       whileHover={{
                       scale: 0.9,
                       transition: { duration: 1 },
-                      backgroundColor: '#ba4c72',
+                      backgroundColor: '#ff0057',
                     }}>
                       <span className="mi-contact-infoblock-icon">
-                        <Icon.Mail />
+                        <Icon.Mail style={{color:"red"}} />
                       </span>
                       <div className="mi-contact-infoblock-content">
                         <h6>Email</h6>
@@ -257,10 +155,10 @@ function Contact(props) {
                     <motion.div className="mi-contact-infoblock"       whileHover={{
                       scale: 0.9,
                       transition: { duration: 1 },
-                      backgroundColor: '#ba4c72',
+                      backgroundColor: '#ff0057',
                     }}>
                       <span className="mi-contact-infoblock-icon">
-                        <Icon.MapPin />
+                        <Icon.MapPin style={{color:"orange"}} />
                       </span>
                       <div className="mi-contact-infoblock-content">
                         <h6>Address</h6>
@@ -269,7 +167,65 @@ function Contact(props) {
                     </motion.div>
                   )}
                 </div>
+
+
+
+
+
+
+
+
+
+
               </div>
+              </div>
+
+
+
+
+
+
+
+
+
+              <div className="col-lg-6">
+              <div className="mi-form-field">
+             <div style={{height:'500px' , marginTop:'-30px'}}>
+  
+             <Map
+                        ref={refMap}
+                        google={props.google}
+                        initialCenter={pin}
+                        style={{ borderRadius: '2%' }}
+                        center={pin}
+                        zoom={16}
+                        mapTypeControl={false}
+                        streetViewControl={false}
+                      >
+                   <Marker
+                   ref={refMap}
+                         // onClick={onMarkerClick}
+                         icon={{
+                           url: LocationIcon,
+                           anchor: new props.google.maps.Point(32,32),
+                           scaledSize: new props.google.maps.Size(30,35)
+                         }}
+                         position={pin}
+                         onClick={()=>window.open("https://maps.google.com?q="+pin.lat+","+pin.lng )}
+                       />
+
+                        
+                      </Map>
+
+
+                      </div>
+
+
+
+                    </div>
+              </div>
+
+
             </div>
           </div>
         </motion.div>

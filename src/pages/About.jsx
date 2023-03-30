@@ -8,11 +8,11 @@ import Layout from "../components/Layout";
 import Sectiontitle from "../components/Sectiontitle";
 import Service from "../components/Service";
 import Spinner from "../components/Spinner";
-
+import Testimonial from "../components/Testimonial";
 import AboutCards from "../components/AboutCards";
 import { GlobalStyle } from "./globleStyle";
 import { motion } from "framer-motion";
-import { useLocation} from "react-router-dom"
+
 function About() {
   const [toggler, setToggler] = useState(false);
   const [information, setInformation] = useState("");
@@ -21,7 +21,6 @@ function About() {
   const [groups, setGroups] = useState([]);
   const [reviews, setReviews] = useState([]);
 
-let location =useLocation();
   
   const sliderSettings = {
     dots: false,
@@ -74,16 +73,22 @@ let location =useLocation();
           content="Learn about Maxon Corvil"
         />
       </Helmet>
-      <Suspense fallback={<Spinner />}>
+       <Suspense fallback={<Spinner />}>
         <motion.div intial={{opacity:0}}
          animate={{opacity:1}}
+         transition={{ duration: 2 }}
          exit={{opacity:0}}>
+      
         <div className="mi-about-area mi-section mi-padding-top" >
           <div className="container">
             <Sectiontitle title="About Me" />
+            </div>
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <div className="mi-about-image">
+              
+          <div  className="mi-resume-wrapper" >
+          <div className="container">
+                <div className="mi-about-image content-padding" >
                   <ProgressiveImage
                     src={information.aboutImage}
                     placeholder="/images/about-image-placeholder.png"
@@ -92,24 +97,25 @@ let location =useLocation();
                       <img
                         src={src}
                         alt="aboutimage"
-                      
                       />
                     )}
                   </ProgressiveImage>
-              
                   <FsLightbox
                     toggler={toggler}
                     sources={[information.aboutImageLg]}
                   />
+
                 </div>
               </div>
-              <motion.div className="col-lg-6 mi-service" 
-                whileHover={{
-                  scale: 0.9,
-                  transition: { duration: 1 },
-                  backgroundColor: '#ba4c72',
+              
+              </div>
+              </div>
+              <motion.div className="col-lg-6 mi-service" 	
+                whileHover={{	
+                  scale: 0.9,	
+                  transition: { duration: 1 },	
+                  backgroundColor: '#ba4c72',	
                 }} >
-                
                 <div className="mi-about-content">
                   <h3>
                     Full Name:  <span className="color-theme">{information.name}</span>
@@ -161,14 +167,20 @@ let location =useLocation();
                 </div>
               </motion.div>
             </div>
-          </div>
+         
         </div>
+
+
         <div className="mi-service-area mi-section mi-padding-top">
+
           <div className="container">
             <Sectiontitle title="Soft Skills" />
-
-
-            <div className="mi-service-wrapper">
+            </div>
+             
+          <div  className="mi-resume-wrapper">
+          <div className="container">
+        
+            <div className="mi-service-wrapper content-padding">
               <div className="row mt-30-reverse">
                 {softSkills.map((skill) => (
                   <div
@@ -180,12 +192,17 @@ let location =useLocation();
                 ))}
               </div>
             </div>
-          </div>
+            </div>
+            </div>
         </div>
         <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
           <div className="container">
-            <Sectiontitle title="Awards" />
-              <div className="mi-service-wrapper">
+            <Sectiontitle title="Awards" /> 
+</div>
+
+          <div  className="mi-resume-wrapper">
+          <div className="container">
+              <div className="mi-service-wrapper content-padding">
                 <div className="row mt-30-reverse">
                   {awards.map((award) => (
                     <div
@@ -197,12 +214,17 @@ let location =useLocation();
                   ))}
                 </div>
               </div>
+              </div>
           </div>
         </div>
         <div className="mi-review-area mi-section mi-padding-top mi-padding-bottom">
           <div className="container">
             <Sectiontitle title="Groups" />
-              <div className="mi-service-wrapper">
+            </div>
+            
+          <div  className="mi-resume-wrapper">
+          <div className="container">
+              <div className="mi-service-wrapper content-padding">
                 <div className="row mt-30-reverse">
                   {groups.map((group) => (
                     <div
@@ -213,6 +235,7 @@ let location =useLocation();
                     </div>
                   ))}
                 </div>
+              </div>
               </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ function Service(props) {
   return (
     <div style={{ perspective: 2000 }}>
       <motion.div
-        className="mi-service"
+        className="mi-service card-fix-height"
         style={{ x, y, rotateX, rotateY, z: 100, borderRadius: '8px', margin: '5px' }}
         drag
         dragElastic={0.18}
@@ -21,10 +21,13 @@ function Service(props) {
           backgroundColor: '#ba4c72',
         }}
       >
-        <span className="mi-service-icon">
-          <LineIcon name={props.content.icon} />
-        </span>
-        <h6 style={{ fontWeight: 'bold' }}>{props.content.title}</h6>
+        <div className="card-text-cente">
+          <span className="mi-service-icon">
+            <LineIcon name={props.content.icon} />
+          </span>
+          <h6 style={{ fontWeight: 'bold' }}>{props.content.title}</h6>
+        </div>
+
         <p style={{ fontSize: '1rem', fontWeight: 'bold' }}> {props.content.details}</p>
         <br />
         <h6 style={{ fontWeight: 'bold' }}>From:</h6>
