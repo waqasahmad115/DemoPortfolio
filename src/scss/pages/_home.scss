@@ -1,0 +1,119 @@
+.mi-home {
+  &-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-particle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &-content {
+    text-align: center;
+    padding: 50px 80px;
+
+    h1 {
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      text-align: justify;
+    }
+
+    .mi-socialicons {
+      margin-top: 20px;
+    }
+  }
+
+  @media #{$layout-laptop} {
+    &-content {
+      padding: 50px 0px;
+      text-align: justify;
+    }
+  }
+
+  @media #{$layout-notebook} {
+    &-content {
+      padding: 50px 0px;
+      text-align: justify;
+    }
+  }
+
+  @media #{$layout-tablet} {
+    &-content {
+      padding: 50px 0px;
+
+      p {
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+        text-align: justify;
+      }
+    }
+  }
+
+  @media #{$layout-mobile-lg} {
+    &-content {
+      padding: 50px 0px;
+
+      p {
+        font-size: 1.08rem;
+        line-height: 1.55rem;
+        text-align: justify;
+      }
+    }
+  }
+
+  @media #{$layout-mobile-sm} {
+    &-content {
+      h1 {
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  color: hsl(0, 58%, 53%);
+  font-size: 50px !important;
+  font-weight: bold !important;
+  font-family: monospace;
+  letter-spacing: 7px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+h1 {
+  padding: 64px;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+
+  60% {
+    background-position: 600px;
+  }
+
+  100% {
+    background-position: 600px;
+  }
+}
