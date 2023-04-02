@@ -5,7 +5,6 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
-  console.log('payload', payload)
   switch (type) {
     case ActionType.SET_THEME:
       return { ...state, theme: payload }

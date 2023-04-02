@@ -14,7 +14,6 @@ function AnimationRoutes() {
   const location = useLocation()
   const [lightMode, setLightMode] = useState(false)
   lightMode ? document.body.classList.add('light') : document.body.classList.remove('light')
-  console.log(lightMode)
 
   return (
     <AnimatePresence>

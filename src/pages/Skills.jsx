@@ -93,7 +93,6 @@ const Skills = () => {
 
       <div className="card_Container" >
         {database.map((skill) => {
-          console.log("program",skill)
           return(
           <div key={skill.title} >
             <SkillCard skill={skill}/>
@@ -112,7 +111,6 @@ const Skills = () => {
 
       <div className="card_Container" >
         {other.map((skill) => {
-          console.log("program",skill)
           return(
           <div key={skill.title} >
             <SkillCard skill={skill}/>

@@ -36,7 +36,7 @@ function Home({ lightMode }) {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
         >
         <div className="mi-home-area mi-padding-section" >
           <HomeBackground/>
@@ -47,7 +47,7 @@ function Home({ lightMode }) {
               
                   <h1>
                   Hi,I'm
-                    <span className="color-theme "> {information.name}</span>
+                    <span> {information.name}</span>
                   </h1>
                   
                   <p>{information.aboutContent}</p>

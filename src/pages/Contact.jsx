@@ -96,7 +96,7 @@ function Contact(props) {
       <Suspense fallback={<Spinner />}>
         <motion.div className="mi-contact-area mi-section mi-padding-top mi-padding-bottom"        intial={{width:0}}
          animate={{width:'100%'}}
-         exit={{x:window.innerWidth, transition:{duration:2}}}>
+         exit={{x:window.innerWidth, transition:{duration:1}}}>
           <div className="container">
             <Sectiontitle title="Contact Me" />
             <div className="row">

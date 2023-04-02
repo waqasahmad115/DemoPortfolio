@@ -40,7 +40,7 @@ useEffect(()=>{
     <Layout>
       <GlobalStyle />
       <Helmet>
-        <title>Resume - Chester React Personal Portfolio Template</title>
+        <title>Work Experience - Chester React Personal Portfolio Template</title>
         <meta
           name="description"
         />
@@ -53,7 +53,7 @@ useEffect(()=>{
 
         <div className="mi-resume-area mi-section mi-padding-top mi-padding-bottom">
           <div className="container">
-            <Sectiontitle title="Resume" />
+            <Sectiontitle title="Work Experience" />
             <Smalltitle title="Working Experience" icon="briefcase" />
             <div className="mi-resume-wrapper">
 

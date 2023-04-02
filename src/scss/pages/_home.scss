@@ -86,8 +86,9 @@
   }
 }
 
+
 h1 {
-  color: hsl(0, 36%, 89%);
+  color: hsl(210°, 1%, 100);
   font-size: 50px !important;
   font-weight: bold !important;
   font-family: monospace;
@@ -97,7 +98,8 @@ h1 {
   padding: 64px;
   background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
 }
+
 
 

@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { Suspense, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-import Resume from '../components/Resume'
 import Sectiontitle from '../components/Sectiontitle'
 import Smalltitle from '../components/Smalltitle'
 import Spinner from '../components/Spinner'
@@ -31,22 +30,22 @@ function Education() {
     <Layout>
       <GlobalStyle />
       <Helmet>
-        <title>Resume - Chester React Personal Portfolio Template</title>
+        <title>Eduaction- Chester React Personal Portfolio Template</title>
         <meta name="description" />
       </Helmet>
       <motion.div
         className="container"
         intial={{ width: 0 }}
         animate={{ width: '100%' }}
-        exit={{ x: window.innerWidth, transition: { duration: 2 } }}
+        exit={{ x: window.innerWidth, transition: { duration: 1 } }}
       >
         <Suspense fallback={<Spinner />}>
           <div className="mi-resume-area mi-section mi-padding-top mi-padding-bottom">
             <div className="container">
-              <Sectiontitle title="Resume" />
-              <Smalltitle title="Working Experience" icon="briefcase" />
+              <Sectiontitle title="Education" />
+              <Smalltitle title="Education " icon="briefcase" />
               <div className="mi-resume-wrapper">
-                {/* className="mi-service"  */}
+    
                 <motion.div style={{ width: 'auto', height: '1000px' }}>
                   <Chrono
                     items={items}
