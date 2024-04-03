@@ -76,7 +76,7 @@ function About() {
        <Suspense fallback={<Spinner />}>
         <motion.div intial={{opacity:0}}
          animate={{opacity:1}}
-         transition={{ duration: 2 }}
+         transition={{ duration: 1 }}
          exit={{opacity:0}}>
       
         <div className="mi-about-area mi-section mi-padding-top" >
